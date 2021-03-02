@@ -1,9 +1,7 @@
-# OpenSea Whitelabel Marketplace
+# RNDR OpenSea Whitelabel Marketplace
 
-Embed a fully functional OpenSea marketplace on your own website in 3 quick steps! [Example marketplace](https://opensea-whitelabel.herokuapp.com/)
+An example of RNDR Branded Opensea Whitelabel Marketplace [Example marketplace](https://opensea-whitelabel.herokuapp.com/)
 
-<img src="https://github.com/ProjectOpenSea/opensea-whitelabel/blob/master/screenshot-desktop.png" width="600" />
-<img src="https://github.com/ProjectOpenSea/opensea-whitelabel/blob/master/screenshot-mobile.png" width="300" />
 
 # Setup
 
@@ -13,11 +11,7 @@ Run `yarn` to install dependencies.
 
 ### Configuration
 
-Edit `constants.ts` to
-1. Set the URL item you want to embed
-  - You can embed any URL! TIP: you can include your affiliate address attached at the end, via "?ref=0x...", and earn referral bonuses!
-2. Set the theme you want to use
-  - You can pick between simple, day, night, and more to come!
+No config required, but a different URL can be specified to load on the iframe under  ```embeddedRNDRUrl```
 
 ### Quick deployment
 

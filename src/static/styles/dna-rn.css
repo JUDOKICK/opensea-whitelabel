@@ -1,0 +1,261 @@
+.dnarn {
+  background: #f0f3f5;
+  width: 100%;
+  z-index: 100;
+}
+
+@media (min-width: 1340px) {
+  .dnarn nav {
+    max-width: 1260px; /** editable **/
+  }
+}
+@media (min-width: 780px) {
+  .dnarn nav {
+    width: 90%; /** editable **/
+  }
+}
+
+.dnarn nav {
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px; /** editable **/
+}
+
+.dnarn nav .logo span {
+  font-size: 20px; /** editable **/
+  font-weight: 600; /** editable **/
+  letter-spacing: -1px; /** editable **/
+  color: #e62249 !important; /** editable **/
+  line-height: 40px; /** editable **/
+}
+
+.dnarn nav .logo img {
+  display: inline-block;
+  vertical-align: top; /** editable **/
+  padding-right: 5px; /** editable **/
+  height: 40px; /** editable **/
+}
+
+.dnarn nav .nav-items {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  padding: 0px 90px 0px 0px; /** editable **/
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.dnarn nav .nav-items::-webkit-scrollbar {
+  display: none;
+}
+
+.dnarn nav .nav-items ul {
+  display: contents;
+}
+
+.dnarn nav .nav-items ul li {
+  list-style: none;
+  padding: 0 15px; /** editable **/
+  color: #000;
+  font-size: 18px; /** editable **/
+}
+
+/** move the last list with class 'right' to right adjust **/
+.dnarn nav .nav-items li.right {
+  margin-left: auto;
+}
+
+.dnarn nav .nav-items ul li a {
+  color: #000;
+  font-size: 18px; /** editable **/
+  font-weight: 500; /** editable **/
+  text-decoration: none; /** editable **/
+}
+
+.dnarn nav .nav-items ul li a.is-active,
+.dnarn nav .nav-items ul li a:hover {
+  color: #e62249; /** editable **/
+}
+.dnarn nav form {
+  display: flex;
+  padding: 2px; /** editable **/
+  background: #1e232b; /** editable **/
+  min-width: 18% !important; /** editable **/
+}
+.dnarn nav form .search-data {
+  width: 100%;
+  height: 100%;
+  color: #000; /** editable **/
+  font-size: 16px; /** editable **/
+  border: none; /** editable **/
+  font-weight: 500; /** editable **/
+  background: none; /** editable **/
+}
+.dnarn nav form .search-data i {
+  color: #000000;
+}
+
+.dnarn nav .menu-icon,
+.dnarn nav .cancel-icon,
+.dnarn nav .search-icon {
+  width: 40px; /** editable **/
+  text-align: center; /** editable **/
+  margin: 0 50px; /** editable **/
+  font-size: 18px; /** editable **/
+  color: #000; /** editable **/
+  cursor: pointer;
+  display: none;
+}
+.dnarn nav .menu-icon span,
+.dnarn nav .cancel-icon,
+.dnarn nav .search-icon {
+  display: none;
+}
+
+@media (min-width: 780px) {
+  .dnarn nav .nav-items {
+    mask-image: -webkit-linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+    );
+    mask-image: -moz-linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: -webkit-linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: -moz-linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+    );
+  }
+}
+
+@media (max-width: 779px) {
+  .dnarn nav {
+    padding: 0px; /** editable **/
+  }
+  .dnarn nav form .search-data {
+    margin: 10px; /** editable **/
+  }
+  .dnarn nav .logo {
+    flex: 2;
+    text-align: center; /** editable **/
+  }
+
+  .dnarn nav .logo img {
+    padding-right: 0;
+  }
+
+  .dnarn nav .logo span {
+    display: none;
+  }
+
+  .dnarn nav .nav-items {
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: calc(100vh - 70px);
+    overflow: auto;
+    margin: 0 auto;
+    padding-bottom: 30px; /** leave some space to scroll to see the last item **/
+    text-align: left;
+    background: #f0f3f5; /** editable **/
+    display: inline-block;
+    transition: left 0.3s ease; /** editable **/
+  }
+  .dnarn nav .nav-items.active {
+    left: 0px;
+  }
+  .dnarn nav .nav-items li {
+    line-height: 40px; /** editable **/
+    margin: 20px 0; /** editable **/
+  }
+  .dnarn nav .nav-items li a {
+    font-size: 20px; /** editable **/
+  }
+
+  .dnarn nav form {
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  .dnarn nav form.active {
+    top: 70px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .dnarn nav .menu-icon {
+    display: block;
+  }
+  .dnarn nav .search-icon {
+    display: none;
+  }
+  .dnarn nav .menu-icon span {
+    display: block;
+  }
+  .dnarn nav .menu-icon span.hide,
+  .dnarn nav .search-icon.hide {
+    display: none;
+  }
+  .dnarn nav .cancel-icon.show {
+    display: block;
+  }
+  .dnarn nav .menu-icon,
+  .dnarn nav .cancel-icon,
+  .dnarn nav .search-icon {
+    margin: 0 20px; /** editable **/
+  }
+  .dnarn nav form {
+    left: 0px;
+    width: 100%;
+    padding: 0 15px; /** editable **/
+  }
+}
+@media (max-width: 350px) {
+  .dnarn nav .menu-icon,
+  .dnarn nav .cancel-icon,
+  .dnarn nav .search-icon {
+    margin: 0 10px; /** editable **/
+    font-size: 16px; /** editable **/
+  }
+}

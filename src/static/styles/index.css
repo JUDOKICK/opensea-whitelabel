@@ -2,12 +2,12 @@ html {
   height: 100%;
   width: 100%;
   /* background-color: #15151E; */
-  background-color: #282c33;
+  background-color: #f0f3f5;
   color: white;
 }
 
 a {
-  color: #6A24D3;
+  color: #f0f3f5;
   text-decoration: none;
 }
 

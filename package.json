@@ -1,9 +1,10 @@
 {
-  "name": "opensea-whitelabel",
-  "author": "Alex Atallah <alex.atallah@opensea.io>",
-  "version": "1.0.0",
-  "description": "An example app showing how to easily white-label OpenSea and create your own NFT marketplace",
+  "name": "rndr-opensea-whitelabel",
+  "author": "Joshua Bijak",
+  "version": "0.0.1",
+  "description": "An example app showing RNDR Opensea Marketplace whitelabel integration",
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -12,6 +13,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "dna-responsive-nav": "^1.0.12",
     "iframe-resizer": "4.2.9",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -19,7 +21,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

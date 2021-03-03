@@ -4,7 +4,8 @@ import rndrLogo from "../../static/images/rndrLogo.png";
 import ResponsiveHeader from 'dna-responsive-nav'
 import 'semantic-ui-css/semantic.min.css'
 import '../../static/styles/dna-rn.css'
-
+import { Button } from "../index";
+import {buyRndr } from "../transak/transak";
 
 const links =(
     <ul>
@@ -29,7 +30,7 @@ const links =(
                 className={'test3'}
                 href='https://rendertoken.com/index#problem'
             >
-                The Problem
+                The Network
             </a>
         </li>
         <li key='team-menu'>
@@ -47,6 +48,11 @@ const links =(
             >
                 Roadmap
             </a>
+        </li>
+        <li key='buy-rndr'>
+            <Button onClick={()=> buyRndr()}>
+                Get RNDR
+            </Button>
         </li>
     </ul>
 );

@@ -6,7 +6,7 @@ import { iframeResizer } from 'iframe-resizer'
 import './static/styles/App.css';
 import HeaderBar  from "./components/header/header";
 //const embeddedUrl = `${ASSET_URL}?embed=${CHOSEN_THEME}`
-const embeddedRNDRUrl = 'https://opensea.io/assets?embed=night'
+const embeddedRNDRUrl = `https://opensea.io/assets?search[collections][0]=beeple-everydays&search[collections][1]=beeple-special-edition&embed=night`
 
 class App extends React.Component {
 
